@@ -12,6 +12,8 @@
     --glow-radius: 4px;
 
     --default-padding: 4px;
+    --intertab-margin: 4px;
+    --navigation-bar-margin-top: 20px;
 }
 
 
@@ -40,6 +42,11 @@ body {
     margin: 0;
 }
 
+.navigation-bar {
+    padding: var(--default-padding);
+    padding-top: var(--navigation-bar-margin-top);
+}
+
 
 
 
@@ -53,4 +60,26 @@ body {
 .dark-mode .header {
     background-color: var(--dark-header-background-color);
     border-bottom: 2px solid var(--dark-color);
+}
+
+.dark-mode .nav-link.active {
+    background-color: var(--dark-background-color) !important;
+    color: var(--dark-color) !important;
+}
+
+
+
+
+
+.nav-link {
+    margin-left: var(--intertab-margin);
+    color: var(--dark-color);
+}
+
+.nav-link:hover {
+    color: var(--dark-color);
+}
+
+.nav-link.active {
+    border-bottom: none;
 }
