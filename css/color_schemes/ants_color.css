@@ -1,0 +1,9 @@
+:root {
+    --color-ants-base: hsl(10, 80%, 70%);
+}
+
+.color-ants {
+    color: var(--color-ants-base);
+    font-weight: bold;
+    text-shadow: none;
+}

@@ -1,0 +1,112 @@
+:root {
+    --color-empty-base: hsl(0, 0%, 50%);
+    --color-fire-base: hsl(20, 100%, 60%);
+    --color-fire-highlight: hsl(20, 100%, 80%);
+    --color-water-base: hsl(240, 100%, 60%);
+    --color-water-highlight: hsl(220, 100%, 80%);
+    --color-earth-base: hsl(120, 100%, 60%);
+    --color-earth-highlight: hsl(120, 50%, 80%);
+    --color-air-base: hsl(190, 100%, 60%);
+    --color-air-highlight: hsl(190, 100%, 80%);
+}
+
+@keyframes animation-elemental-shimmer {
+    0% { background-position: 0% 50%; }
+    99.99% { background-position: 200% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.color-empty {
+    color: var(--color-empty-base);
+    
+    font-weight: bold;
+    text-shadow: none;
+}
+
+.color-fire {
+    background: linear-gradient(
+        45deg,
+        var(--color-empty-base) 0%,
+        var(--color-empty-base) 40%,
+        var(--color-fire-base) 45%,
+        var(--color-fire-highlight) 50%,
+        var(--color-fire-base) 55%,
+        var(--color-empty-base) 60%,
+        var(--color-empty-base) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    background-size: 200% auto;
+    animation: animation-elemental-shimmer 3s linear infinite;
+
+    font-weight: bold;
+    text-shadow: none;
+}
+
+.color-water {
+    background: linear-gradient(
+        45deg,
+        var(--color-empty-base) 0%,
+        var(--color-empty-base) 40%,
+        var(--color-water-base) 45%,
+        var(--color-water-highlight) 50%,
+        var(--color-water-base) 55%,
+        var(--color-empty-base) 60%,
+        var(--color-empty-base) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    background-size: 200% auto;
+    animation: animation-elemental-shimmer 3s linear infinite;
+
+    font-weight: bold;
+    text-shadow: none;
+}
+
+.color-earth {
+    background: linear-gradient(
+        45deg,
+        var(--color-empty-base) 0%,
+        var(--color-empty-base) 40%,
+        var(--color-earth-base) 45%,
+        var(--color-earth-highlight) 50%,
+        var(--color-earth-base) 55%,
+        var(--color-empty-base) 60%,
+        var(--color-empty-base) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    background-size: 200% auto;
+    animation: animation-elemental-shimmer 3s linear infinite;
+
+    font-weight: bold;
+    text-shadow: none;
+}
+
+.color-air {
+    background: linear-gradient(
+        45deg,
+        var(--color-empty-base) 0%,
+        var(--color-empty-base) 40%,
+        var(--color-air-base) 45%,
+        var(--color-air-highlight) 50%,
+        var(--color-air-base) 55%,
+        var(--color-empty-base) 60%,
+        var(--color-empty-base) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    background-size: 200% auto;
+    animation: animation-elemental-shimmer 3s linear infinite;
+
+    font-weight: bold;
+    text-shadow: none;
+}
