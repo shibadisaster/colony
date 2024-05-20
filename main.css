@@ -6,8 +6,8 @@
 
     --font-family: "Franklin Gothic";
     --font-size: 14px;
-    --header-font-family: "Bodoni MT";
-    --header-font-size: 20px;
+    --header-font-family: "Franklin Gothic"; /* Bodoni MT */
+    --header-font-size: 18px;
 
     --glow-radius: 4px;
 
@@ -30,7 +30,7 @@ body {
 }
 
 .header {
-    font-size: 20px;
+    font-size: var(--header-font-size);
     margin-left: auto;
     margin-right: auto;
     padding: var(--default-padding);
@@ -58,8 +58,13 @@ body {
 }
 
 .dark-mode .header {
-    background-color: var(--dark-header-background-color);
-    border-bottom: 2px solid var(--dark-color);
+    background-image: linear-gradient(
+        180deg,
+        var(--dark-header-background-color),
+        var(--dark-header-background-color),
+        var(--dark-background-color));
+    padding-bottom: var(--header-font-size);
+    /* border-bottom: 2px solid var(--dark-color); */
 }
 
 .dark-mode .nav-link.active {
