@@ -14,6 +14,9 @@
     --default-padding: 4px;
     --intertab-margin: 4px;
     --navigation-bar-margin-top: 20px;
+
+    --transition-time: 0.5s;
+    --transition-properties: all;
 }
 
 
@@ -26,6 +29,7 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     text-shadow: 0 0 var(--glow-radius) var(--glow-color);
+    transition: var(--transition-properties) var(--transition-time);
 }
 
 .container {
