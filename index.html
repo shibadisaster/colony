@@ -59,7 +59,7 @@
 
                     <br><br>
                     You are currently producing <br>
-                    <span class="color-ants display display-ants-production_rate"></span>
+                    <span class="color-ants display display-hoverable display-ants-production_rate" onclick="console.log(game.resources.ants.production_rate)"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"></span>
                 </div>
 
 
@@ -94,7 +94,39 @@
 
         <div class="overlays">
 
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Ants Production</h5>
+                    <button type="button" class="offcanvas-close" data-bs-dismiss="offcanvas" aria-label="Close">&#10006;</button>
+                </div>
+                <div class="offcanvas-body">
+                    <table class="table table-dark">
+                        <thead>
+                            <tr>
+                                <th> Factor </th>
+                                <th> Effect </th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-group-divider">
+                            <tr>
+                                <td> Base </td>
+                                <td> 0/s </td>
+                            </tr>
+                            <tr>
+                                <td> Breeding </td>
+                                <td> +1/s </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+              </div>
+
         </div>
+
+
+
+
+
     </body>
 
 </html>

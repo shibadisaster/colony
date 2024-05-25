@@ -62,8 +62,6 @@ body {
 
 
 
-
-
 .header {
     background-image: linear-gradient(
         180deg,
@@ -90,4 +88,57 @@ body {
 
 .nav-link:hover {
     color: var(--text-color);
+}
+
+
+
+
+
+.display-hoverable {
+    cursor: pointer;
+}
+
+.display-hoverable:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+.offcanvas {
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.offcanvas-title {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.offcanvas-close {
+    color: var(--text-color);
+    background-color: var(--background-color);
+    border: none;
+}
+
+
+
+
+
+.btn-close {
+    margin-left: 0 !important;
+}
+
+
+
+
+
+th, td {
+    text-align: center;
+    background-color: var(--background-color) !important;
+}
+
+table {
+    background-color: var(--background-color) !important;
 }
