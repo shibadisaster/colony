@@ -30,6 +30,19 @@ class ValueModifier {
                 break;
         }
     }
+
+    apply_modifier(d) { // decimal input
+        switch (this.type) {
+            case "BASE":
+                return this.value;
+            case "ADD":
+                return d.add(this.value);
+            case "MULT":
+                return d.mul(this.value);
+            case "POW":
+                return d.pow(this.value);
+        }
+    }
 }
 
 
@@ -41,4 +54,4 @@ a.value = new Decimal('4.41933211258');
 a = new ValueModifier("MultExample", "MULT", game.resources.ants);
 a.value = new Decimal('57.392102');
 a = new ValueModifier("ExpExample", "POW", game.resources.ants);
-a.value = new Decimal('318.3182238728');
+a.value = new Decimal('1.27');
