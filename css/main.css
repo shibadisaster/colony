@@ -36,6 +36,10 @@ body {
     padding-top: var(--default-padding);
 }
 
+.tab-pane {
+    text-align: center;
+}
+
 .header {
     font-size: var(--header-font-size);
     margin-left: auto;
