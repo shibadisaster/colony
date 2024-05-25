@@ -10,3 +10,11 @@ function format_value(decimal) {
 
     return mantissa + " &times; 10<sup>" + exponent_suffix + "</sup>";
 }
+
+function format_value_with_decimal(decimal) {
+    if (decimal.gte('1000')) {
+        return format_value(decimal);
+    }
+
+    return decimal.toFixed(2, Decimal.ROUND_DOWN);
+}
