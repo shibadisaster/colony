@@ -43,6 +43,16 @@ class ValueModifier {
                 return d.pow(this.value);
         }
     }
+
+    is_effectual() { // returns if the valuemodifier has any effect on its value or not (i.e. check for x + 0 = x, x * 1 = x, etc)
+        if (this.type == "BASE") {
+            return true;
+        }
+        if ((this.type == "ADD" && this.value.eq(0)) || (this.type == "MULT" && this.value.eq(1)) || (this.type == "POW" && this.value.eq(1))) {
+            return false;
+        }
+        return true;
+    }
 }
 
 

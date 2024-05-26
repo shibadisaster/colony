@@ -35,21 +35,32 @@ class Resource {
         var table_html = "";
         var running_total = new Decimal(0);
         for (var mod in this.production_modifiers) {
-            table_html += "<tr>";
-            table_html += "<td>" + this.production_modifiers[mod].name + "</td>";
+            if (this.production_modifiers[mod].is_effectual()) {
+                table_html += "<tr>";
+                table_html += "<td>" + this.production_modifiers[mod].name + "</td>";
 
-            this.production_modifiers[mod].update_value_string();
-            table_html += "<td>" + this.production_modifiers[mod].value_string + "</td>";
+                this.production_modifiers[mod].update_value_string();
+                table_html += "<td>" + this.production_modifiers[mod].value_string + "</td>";
 
-            running_total = this.production_modifiers[mod].apply_modifier(running_total);
-            table_html += "<td>" + format_value_with_decimal(running_total) + "/s </td>";
-            table_html += "</tr>";
+                running_total = this.production_modifiers[mod].apply_modifier(running_total);
+                table_html += "<td>" + format_value_with_decimal(running_total) + "/s </td>";
+                table_html += "</tr>";
+            }
+            
         }
         $(".production-breakdown-" + this.name).html(table_html);
     }
 
     apply_production() {
+        this.update_production_rate();
         this.amount = this.amount.add(this.production_rate.div(game.tickrate));
+    }
+
+    update_production_rate() {
+        this.production_rate = new Decimal(0);
+        for (var mod in this.production_modifiers) {
+            this.production_rate = this.production_modifiers[mod].apply_modifier(this.production_rate);
+        }
     }
 
     add_value_modifier(modifier) {
