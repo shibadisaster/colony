@@ -1,0 +1,13 @@
+:root {
+    --color-negative-modifier-base: hsl(0, 100%, 65%);
+}
+
+.color-negative-modifier {
+    color: var(--color-negative-modifier-base) !important;
+    text-shadow: 0 0 var(--glow-radius) var(--color-negative-modifier-base);
+}
+
+.color-negative-modifier td {
+    color: var(--color-negative-modifier-base) !important;
+    text-shadow: 0 0 var(--glow-radius) var(--color-negative-modifier-base);
+}

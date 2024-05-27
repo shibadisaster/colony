@@ -1,5 +1,5 @@
 var game = {}
-game.tickrate = 32;
+game.tickrate = 50;
 game.total_time = 0;
 
 game.resources = {};

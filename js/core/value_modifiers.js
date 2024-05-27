@@ -59,6 +59,16 @@ class ValueModifier {
         return true;
     }
 
+    is_negative() { // returns if the valuemodifier has a negative effect
+        if (this.type == "BASE") {
+            return false;
+        }
+        if ((this.type == "ADD" && this.value.lt(0)) || (this.type == "MULT" && this.value.lt(1)) || (this.type == "POW" && this.value.lt(1))) {
+            return true;
+        }
+        return false;
+    }
+
     update_value() {
         this.value_function();
     }

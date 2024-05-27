@@ -36,13 +36,15 @@ class Resource {
         var running_total = new Decimal(0);
         for (var mod in this.production_modifiers) {
             if (this.production_modifiers[mod].is_effectual()) {
-                table_html += "<tr>";
+                this.production_modifiers[mod].is_negative() ? table_html += "<tr class='color-negative-modifier'>" : table_html += "<tr>";
+
                 table_html += "<td>" + this.production_modifiers[mod].name + "</td>";
 
                 table_html += "<td>" + this.production_modifiers[mod].value_string + "</td>";
 
                 running_total = this.production_modifiers[mod].apply_modifier(running_total);
                 table_html += "<td>" + format_value_with_decimal(running_total) + "/s </td>";
+
                 table_html += "</tr>";
             }
             
