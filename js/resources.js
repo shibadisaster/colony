@@ -39,7 +39,6 @@ class Resource {
                 table_html += "<tr>";
                 table_html += "<td>" + this.production_modifiers[mod].name + "</td>";
 
-                this.production_modifiers[mod].update_value_string();
                 table_html += "<td>" + this.production_modifiers[mod].value_string + "</td>";
 
                 running_total = this.production_modifiers[mod].apply_modifier(running_total);

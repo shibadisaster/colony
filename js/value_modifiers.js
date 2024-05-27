@@ -6,7 +6,12 @@ class ValueModifier {
 
         this.value_string = "";
 
+        this.value_function = function() {
+            this.value = this.value;
+        }
+
         target.add_value_modifier(this);
+        game.value_modifiers[this.name] = this;
     }
 
     update_value_string() {
@@ -53,6 +58,10 @@ class ValueModifier {
         }
         return true;
     }
+
+    update_value() {
+        this.value_function();
+    }
 }
 
 
@@ -62,6 +71,4 @@ a = new ValueModifier("Base", "BASE", game.resources.ants);
 a = new ValueModifier("Breeding", "ADD", game.resources.ants);
 a.value = new Decimal('4.41933211258');
 a = new ValueModifier("MultExample", "MULT", game.resources.ants);
-a.value = new Decimal('57.392102');
-a = new ValueModifier("ExpExample", "POW", game.resources.ants);
-a.value = new Decimal('1.27');
+a.value = new Decimal('1.01');
