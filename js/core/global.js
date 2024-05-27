@@ -4,6 +4,7 @@ game.total_time = 0;
 
 game.resources = {};
 game.value_modifiers = {};
+game.values = {};
 
 
 

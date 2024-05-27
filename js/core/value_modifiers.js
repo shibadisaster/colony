@@ -63,12 +63,3 @@ class ValueModifier {
         this.value_function();
     }
 }
-
-
-
-// value modifier declarations
-a = new ValueModifier("Base", "BASE", game.resources.ants);
-a = new ValueModifier("Breeding", "ADD", game.resources.ants);
-a.value = new Decimal('4.41933211258');
-a = new ValueModifier("MultExample", "MULT", game.resources.ants);
-a.value = new Decimal('1.01');

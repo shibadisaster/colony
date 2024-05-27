@@ -66,9 +66,3 @@ class Resource {
         this.production_modifiers.push(modifier);
     }
 }
-
-
-
-// resource declarations
-ants = new Resource("ant", "ants");
-ants.amount = new Decimal(2);
