@@ -20,6 +20,11 @@ function tick() {
         game.value_modifiers[value_modifier].update_value();
         game.value_modifiers[value_modifier].update_value_string();
     }
+
+    for (value in game.values) {
+        game.values[value].update_value_string();
+        game.values[value].update_displays();
+    }
 }
 
 

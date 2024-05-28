@@ -44,8 +44,8 @@
         <div class="container navigation-bar">
             <ul class="nav nav-tabs justify-content-center">
                 <button class="nav-link active" id="colony-tab" data-bs-toggle="tab" data-bs-target="#colony" type="button" role="tab" aria-controls="colony" aria-selected="true"> Colony </button>
-                <button class="nav-link" id="resources-tab" data-bs-toggle="tab" data-bs-target="#resources" type="button" role="tab" aria-controls="resources" aria-selected="false"> Resources </button>
-                <button class="nav-link" id="research-tab" data-bs-toggle="tab" data-bs-target="#research" type="button" role="tab" aria-controls="research" aria-selected="false"> Research </button>
+                <!-- <button class="nav-link" id="resources-tab" data-bs-toggle="tab" data-bs-target="#resources" type="button" role="tab" aria-controls="resources" aria-selected="false"> Resources </button> -->
+                <!-- <button class="nav-link" id="research-tab" data-bs-toggle="tab" data-bs-target="#research" type="button" role="tab" aria-controls="research" aria-selected="false"> Research </button> -->
             </ul>
         </div>
 
@@ -63,7 +63,10 @@
 
                     <br><br>
                     You are currently producing <br>
-                    <span class="color-ants display display-hoverable display-ants-production_rate" onclick="console.log(game.resources.ants.production_rate)"  data-bs-toggle="offcanvas" data-bs-target="#ants-production-offcanvas" aria-controls="ants-production-offcanvas"></span>
+                    <span class="color-ants display display-hoverable display-ants-production_rate" data-bs-toggle="offcanvas" data-bs-target="#ants-production-offcanvas" aria-controls="ants-production-offcanvas"></span>
+
+                    <br><br>
+                    Your Colony's ant carrying capacity is <span class="color-ants display display-ant_carrying_capacity-value_string"></span>. Each ant over this carrying capacity slows ant generation rate by <span class="color-ants display">5%</span> (compounding).
                 </div>
 
 
