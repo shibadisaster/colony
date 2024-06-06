@@ -23,6 +23,6 @@ class Value {
     update_displays() {
         this.update_value_string();
         $(".display-" + this.name + "-value_string").html(this.value_string);
-        console.log((".display-" + this.name + "-value_string"));
+        //console.log((".display-" + this.name + "-value_string"));
     }
 }

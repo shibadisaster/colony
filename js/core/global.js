@@ -5,6 +5,7 @@ game.total_time = 0;
 game.resources = {};
 game.value_modifiers = {};
 game.values = {};
+game.locks = {};
 
 
 
@@ -25,7 +26,13 @@ function tick() {
         game.values[value].update_value_string();
         game.values[value].update_displays();
     }
-}
+
+    $(".locked-by-default").hide();
+    $(".unlocked-by-default").show();
+    for (lock in game.locks) {
+        game.locks[lock].update_locks();
+    }
+}1
 
 
 

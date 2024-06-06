@@ -27,3 +27,11 @@ ants_over_carrying_capacity.value_function = function() {
         this.value = new Decimal('0.95').pow(surplus);
     }
 }
+
+
+
+// lock declarations
+lock_50_ants = new Lock("50_ants", true);
+lock_50_ants.unlock_criteria = function() {
+    return game.resources.ants.amount.gte("50") ? true : false;
+}

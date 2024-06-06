@@ -30,6 +30,7 @@
         <script src="js/core/resources.js"></script>
         <script src="js/core/values.js"></script>
         <script src="js/core/value_modifiers.js"></script>
+        <script src="js/core/locks.js"></script>
 
         <!-- initialization scripts -->
         <script src="js/initialization.js"></script>
@@ -58,15 +59,13 @@
 
 
                 <div class="tab-pane fade show active" id="colony" role="tabpanel" aria-labelledby="colony-tab">
-                    You currently have <br>
-                    <span class="color-ants display display-ants-value_string"></span>
+                    <p> You currently have <br>
+                    <span class="color-ants display display-ants-value_string"></span></p>
 
-                    <br><br>
-                    You are currently producing <br>
-                    <span class="color-ants display display-hoverable display-ants-production_rate" data-bs-toggle="offcanvas" data-bs-target="#ants-production-offcanvas" aria-controls="ants-production-offcanvas"></span>
+                    <p> You are currently producing <br>
+                    <span class="color-ants display display-hoverable display-ants-production_rate" data-bs-toggle="offcanvas" data-bs-target="#ants-production-offcanvas" aria-controls="ants-production-offcanvas"></span></p>
 
-                    <br><br>
-                    Your Colony's ant carrying capacity is <span class="color-ants display display-ant_carrying_capacity-value_string"></span>. Each ant over this carrying capacity slows ant generation rate by <span class="color-ants display">5%</span> (compounding).
+                    <p class="locked-by-default unlocked-by-50_ants"> Your Colony's ant carrying capacity is <span class="color-ants display display-ant_carrying_capacity-value_string"></span>. Each ant over this carrying capacity slows ant generation rate by <span class="color-ants display">5%</span> (compounding).</p>
                 </div>
 
 
