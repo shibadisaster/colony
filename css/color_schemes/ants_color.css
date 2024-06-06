@@ -1,9 +1,16 @@
 :root {
     --color-ants-base: hsl(10, 80%, 70%);
+    --color-queens-base: hsl(210, 80%, 70%);
 }
 
 .color-ants {
     color: var(--color-ants-base);
+    font-weight: bold;
+    text-shadow: none;
+}
+
+.color-queens {
+    color: var(--color-queens-base);
     font-weight: bold;
     text-shadow: none;
 }

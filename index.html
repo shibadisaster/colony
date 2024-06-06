@@ -39,7 +39,13 @@
 
     <body>
         <div class="header">
-            <p> You have <span class="color-ants display display-ants-value_string"></span> </p>
+            <p class="header-text"> 
+                You have <span class="color-ants display display-ants-value_string"></span>
+                <span class=""> and <span class="color-queens display display-queens-value_string">0 queens</span></span>
+            </p>
+
+            <span class="unlocked-by-default locked-by-80_ants"> Reach <span class="color-ants">80 ants</span> to unlock something new... </span>
+            <span class="locked-by-default unlocked-by-80_ants locked-by-1000_ants"> Reach <span class="color-ants">1000 ants</span> to unlock something new... </span>
         </div>
 
         <div class="container navigation-bar">
@@ -59,13 +65,26 @@
 
 
                 <div class="tab-pane fade show active" id="colony" role="tabpanel" aria-labelledby="colony-tab">
-                    <p> You currently have <br>
-                    <span class="color-ants display display-ants-value_string"></span></p>
+                    <div class="d-flex flex-row justify-content-evenly">
 
-                    <p> You are currently producing <br>
-                    <span class="color-ants display display-hoverable display-ants-production_rate" data-bs-toggle="offcanvas" data-bs-target="#ants-production-offcanvas" aria-controls="ants-production-offcanvas"></span></p>
+                        <div class="p-2 flex-even-width">
+                            <p> You currently have <br>
+                            <span class="color-ants display display-ants-value_string"></span></p>
+            
+                            <p> You are currently producing <br>
+                            <span class="color-ants display display-hoverable display-ants-production_rate" data-bs-toggle="offcanvas" data-bs-target="#ants-production-offcanvas" aria-controls="ants-production-offcanvas"></span></p>
+            
+                            <p class="locked-by-default unlocked-by-50_ants"> Your Colony's ant carrying capacity is <span class="color-ants display display-ant_carrying_capacity-value_string"></span>. Each ant over this carrying capacity slows ant generation rate by <span class="color-ants display">5%</span> (compounding).</p>
+                        </div>
 
-                    <p class="locked-by-default unlocked-by-50_ants"> Your Colony's ant carrying capacity is <span class="color-ants display display-ant_carrying_capacity-value_string"></span>. Each ant over this carrying capacity slows ant generation rate by <span class="color-ants display">5%</span> (compounding).</p>
+
+
+                        <div class="p-2 flex-even-width locked-by-default unlocked-by-80_ants">
+                            <p> You currently have <br>
+                            <span class="color-queens display display-queens-value_string">5 queens</span></p>
+                        </div>
+
+                    </div>
                 </div>
 
 
