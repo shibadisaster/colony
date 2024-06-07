@@ -4,10 +4,13 @@
     --text-color: rgb(255, 255, 255);
     --glow-color: rgba(255, 255, 255, 0.5);
 
-    --font-family: "Franklin Gothic";
-    --font-size: 14px;
-    --header-font-family: "Franklin Gothic"; /* Bodoni MT */
+    --font-family: "Roboto Mono";
+    --font-size: 12px;
+    --header-font-family: "Roboto Mono"; /* Bodoni MT */
     --header-font-size: 18px;
+    --section-header-font-family: "Roboto Mono"; /* Bodoni MT */
+    --section-header-font-size: 16px;
+    --section-header-letter-spacing: 1px;
 
     --glow-radius: 4px;
 
@@ -15,6 +18,10 @@
     --header-padding: 12px;
     --intertab-margin: 4px;
     --navigation-bar-margin-top: 20px;
+    --navigation-bar-margin-bottom: 10px;
+    --section-header-margin-bottom: 20px;
+
+    --border-radius: 6px;
 
     --transition-time: 0.5s;
     --transition-properties: all;
@@ -59,12 +66,32 @@ body {
 .header-text {
     margin: 0;
     font-size: var(--header-font-size);
+    font-family: var(--header-font-family);
+}
+
+.section-header {
+    font-size: var(--section-header-font-size);
+    font-family: var(--section-header-font-family);
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: var(--section-header-letter-spacing);
+
+    width: 50%;
+    padding: var(--default-padding);
+    margin: 0 auto;
+    margin-bottom: var(--section-header-margin-bottom);
+    
+    border-bottom-style: dotted !important;
+    border-bottom-width: 1px !important;
+    border-bottom: var(--text-color);
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
 }
 
 .navigation-bar {
     padding: var(--default-padding);
     padding-top: var(--navigation-bar-margin-top);
-    margin-bottom: 30px;
+    margin-bottom: var(--navigation-bar-margin-bottom);
 }
 
 
