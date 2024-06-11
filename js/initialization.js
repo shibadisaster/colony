@@ -14,8 +14,6 @@ carrying_capacity = new Value("ant_carrying_capacity", new Decimal(50));
 
 
 // value modifier declarations
-ants_base_production = new ValueModifier("Base", "BASE", game.resources.ants);
-
 ants_breeding_production = new ValueModifier("Breeding", "ADD", game.resources.ants);
 ants_breeding_production.value_function = function() {
     this.value = game.resources.ants.amount.sqrt().div(5);
