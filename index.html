@@ -45,7 +45,7 @@
         <div class="header">
             <p class="header-text"> 
                 You have <span class="color-ants display display-ants-value_string"></span>
-                <span class=""> and <span class="color-queens display display-queens-value_string">0 queens</span></span>
+                <span class="locked-by-default unlocked-by-80_ants"> and <span class="color-queens display display-queens-value_string">0 queens</span></span>
             </p>
 
             <span class="unlocked-by-default locked-by-80_ants"> Reach <span class="color-ants">80 ants</span> to unlock something new... </span>
@@ -56,10 +56,11 @@
 
 
 
-        <div class="container navigation-bar">
+        <div class="navigation-bar">
             <ul class="nav nav-tabs justify-content-center">
                 <button class="nav-link active" id="colony-tab" data-bs-toggle="tab" data-bs-target="#colony" type="button" role="tab" aria-controls="colony" aria-selected="true"> Colony </button>
                 <button class="nav-link" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false"> Settings </button>
+                <button class="nav-link" id="info-tab" data-bs-toggle="tab" data-bs-target="#info" type="button" role="tab" aria-controls="info" aria-selected="false"> About </button>
                 <!-- <button class="nav-link" id="resources-tab" data-bs-toggle="tab" data-bs-target="#resources" type="button" role="tab" aria-controls="resources" aria-selected="false"> Resources </button> -->
                 <!-- <button class="nav-link" id="research-tab" data-bs-toggle="tab" data-bs-target="#research" type="button" role="tab" aria-controls="research" aria-selected="false"> Research </button> -->
             </ul>
@@ -69,7 +70,7 @@
 
 
 
-        <div class="container">
+        <div class="content-container">
 
             <div class="tab-content" id="myTabContent">
 
@@ -181,6 +182,20 @@
 
                         <div class="p-2 flex-even-width">
                             <div class="section-header"> GAMEPLAY </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="tab-pane fade" id="info" role="tabpanel" aria-labelledby="info-tab">
+                    <div class="d-flex flex-row justify-content-evenly">
+
+                        <div class="p-2 flex-even-width">
+                            <div class="section-header"> ABOUT </div>
                         </div>
 
                     </div>
