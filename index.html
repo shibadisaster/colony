@@ -79,31 +79,56 @@
                         <div class="p-2 flex-even-width">
                             <div class="section-header"> ANTS </div>
 
-                            <p> You currently have <br>
-                            <span class="color-ants display display-ants-value_string"></span></p>
+                            You currently have <span class="color-ants display display-ants-value_string"></span> <br>
+                            You are currently producing <span class="color-ants display display-hoverable display-ants-production_rate" data-bs-toggle="offcanvas" data-bs-target="#ants-production-offcanvas" aria-controls="ants-production-offcanvas"></span> <br>
+
+                            <br>
             
-                            <p> You are currently producing <br>
-                            <span class="color-ants display display-hoverable display-ants-production_rate" data-bs-toggle="offcanvas" data-bs-target="#ants-production-offcanvas" aria-controls="ants-production-offcanvas"></span></p>
-            
 
-                            <p class="locked-by-default unlocked-by-50_ants"> Your Colony's ant carrying capacity is <span class="color-ants display display-ant_carrying_capacity-value_string"></span>. <br>
-                                Each ant over this carrying capacity slows ant generation rate by <span class="color-ants display">5%</span> (compounding).</p>
+                            <span class="locked-by-default unlocked-by-50_ants"> Your Colony's ant carrying capacity is <span class="color-ants display display-ant_carrying_capacity-value_string"></span>. <br>
+                                Each ant over this carrying capacity slows ant generation rate by <span class="color-ants display">5%</span> (compounding).</span>
 
-                            <br><br>
+                            <br><br><br>
 
-                            <table class="table table-dark">
+                            <table class="table table-dark locked-by-default">
                                 <thead>
                                     <tr>
                                         <th> Job </th>
                                         <th> Amount </th>
                                         <th> Ratio </th>
+                                        <th> Output </th>
                                     </tr>
                                 </thead>
                                 <tbody class="table-group-divider">
                                     <tr>
-                                        <td> Forager Ants </td>
+                                        <td> Harvester Ants </td>
                                         <td> 0 ants </td>
                                         <td> <input type="number" value="0" min="0"> </td>
+                                        <td> 0 food/s </td>
+                                    </tr>
+                                    <tr>
+                                        <td> Digger Ants </td>
+                                        <td> 0 ants </td>
+                                        <td> <input type="number" value="0" min="0"> </td>
+                                        <td> 0 sand/s </td>
+                                    </tr>
+                                    <tr>
+                                        <td> Carpenter Ants </td>
+                                        <td> 0 ants </td>
+                                        <td> <input type="number" value="0" min="0"> </td>
+                                        <td> building idk </td>
+                                    </tr>
+                                    <tr>
+                                        <td> Soldier Ants </td>
+                                        <td> 0 ants </td>
+                                        <td> <input type="number" value="0" min="0"> </td>
+                                        <td> damage idk </td>
+                                    </tr>
+                                    <tr>
+                                        <td> Explorer Ants </td>
+                                        <td> 0 ants </td>
+                                        <td> <input type="number" value="0" min="0"> </td>
+                                        <td> exploration idk </td>
                                     </tr>
                                 </tbody>
                             </table>

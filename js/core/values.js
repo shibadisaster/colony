@@ -16,6 +16,13 @@ class Value {
         this.value_modifiers.push(modifier);
     }
 
+    apply_value_modifiers() {
+        this.value = new Decimal(0);
+        for (var mod in this.value_modifiers) {
+            this.value = this.value_modifiers[mod].apply_modifier(this.value);
+        }
+    }
+
     update_value_string() {
         this.value_string = format_value(this.value);
     }

@@ -22,6 +22,9 @@
     --navigation-bar-margin-bottom: 10px;
     --section-header-margin-bottom: 20px;
 
+    --offcanvas-width: 40%;
+    --input-width: 60px;
+
     --border-radius: 6px;
 
     --transition-time: 0.5s;
@@ -139,6 +142,10 @@ body {
     background-color: var(--background-color);
 }
 
+.offcanvas.offcanvas-start {
+    width: var(--offcanvas-width);
+}
+
 .offcanvas-title {
     margin-left: auto;
     margin-right: auto;
@@ -180,7 +187,7 @@ input[type="number"] {
 
     color: var(--text-color);
     text-align: center;
-    
+    width: var(--input-width);
 }
 
 /* Chrome, Safari, Edge, Opera */

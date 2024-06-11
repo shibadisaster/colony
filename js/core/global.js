@@ -23,6 +23,7 @@ function tick() {
     }
 
     for (value in game.values) {
+        game.values[value].apply_value_modifiers();
         game.values[value].update_value_string();
         game.values[value].update_displays();
     }

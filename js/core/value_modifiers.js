@@ -11,7 +11,7 @@ class ValueModifier {
         }
 
         target.add_value_modifier(this);
-        game.value_modifiers[this.name] = this;
+        game.value_modifiers[target.name + ":" + this.name] = this;
     }
 
     update_value_string() {

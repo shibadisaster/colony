@@ -4,16 +4,25 @@ function format_value(decimal) {
     }
 
     var exponent_suffix = decimal.e;
-
     var mantissa = decimal.div(new Decimal(10).pow(exponent_suffix));
     mantissa = mantissa.toFixed(2, Decimal.ROUND_DOWN);
-
     return mantissa + " &times; 10<sup>" + exponent_suffix + "</sup>";
 }
 
 function format_value_with_decimal(decimal) {
     if (decimal.gte('1000')) {
         return format_value(decimal);
+    }
+
+    if (decimal.eq('0')) {
+        return decimal.toFixed(2, Decimal.ROUND_DOWN);
+    }
+
+    if (decimal.lt('0.01')) {
+        var exponent_suffix = decimal.e;
+        var mantissa = decimal.div(new Decimal(10).pow(exponent_suffix));
+        mantissa = mantissa.toFixed(2, Decimal.ROUND_DOWN);
+        return mantissa + " &times; 10<sup>" + exponent_suffix + "</sup>";
     }
 
     return decimal.toFixed(2, Decimal.ROUND_DOWN);
