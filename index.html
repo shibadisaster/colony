@@ -140,8 +140,8 @@
                         <div class="p-2 flex-even-width locked-by-default unlocked-by-80_ants">
                             <div class="section-header"> QUEENS </div>
 
-                            <p> You currently have <br>
-                            <span class="color-queens display display-queens-value_string">5 queens</span></p>
+                            You currently have <span class="color-queens display display-queens-value_string">5 queens</span> <br>
+                            You are currently producing <span class="color-queens display display-hoverable display-queens-production_rate" data-bs-toggle="offcanvas" data-bs-target="#queens-production-offcanvas" aria-controls="queens-production-offcanvas">0 queens/s</span> <br>
                         </div>
 
                     </div>
@@ -213,7 +213,7 @@
 
 
 
-        <div class="overlays">
+        <div class="overlays" id="overlays">
 
             <div class="offcanvas offcanvas-start" tabindex="-1" id="ants-production-offcanvas" aria-labelledby="ants-production-offcanvasLabel">
                 <div class="offcanvas-header">

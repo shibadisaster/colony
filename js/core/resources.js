@@ -53,11 +53,11 @@ class Resource {
     }
 
     apply_production() {
-        this.update_production_rate();
+        this.apply_value_modifiers();
         this.amount = this.amount.add(this.production_rate.div(game.tickrate));
     }
 
-    update_production_rate() {
+    apply_value_modifiers() {
         this.production_rate = new Decimal(0);
         for (var mod in this.production_modifiers) {
             this.production_rate = this.production_modifiers[mod].apply_modifier(this.production_rate);
