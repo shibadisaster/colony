@@ -1,4 +1,11 @@
 $('document').ready(function() {
+    //globals
+    time_played = new Value("time_played", new Decimal(0));
+
+
+
+
+
     // resource declarations
     ants = new Resource("ants", new Decimal(2));
 

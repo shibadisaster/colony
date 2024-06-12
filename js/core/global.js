@@ -1,7 +1,6 @@
 var game = {}
 game.tickrate = 30;
 game.timewarp = 5;
-game.total_time = 0;
 
 game.resources = {};
 game.value_modifiers = {};
@@ -11,7 +10,7 @@ game.locks = {};
 
 
 function tick() {
-    game.total_time += 1 / game.tickrate;
+    game.values.time_played.get_base_modifier().value = game.values.time_played.get_base_modifier().value.add(1 / game.tickrate);
 
     for (resource in game.resources) {
         game.resources[resource].apply_production();
