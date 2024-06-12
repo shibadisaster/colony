@@ -1,5 +1,6 @@
 var game = {}
-game.tickrate = 50;
+game.tickrate = 30;
+game.timewarp = 5;
 game.total_time = 0;
 
 game.resources = {};
@@ -38,6 +39,6 @@ function tick() {
 
 
 $(document).ready(function () {
-    gameloop = window.setInterval(tick, 1000 / game.tickrate);
+    gameloop = window.setInterval(tick, 1000 / (game.tickrate * game.timewarp));
     console.log("Loop started!");
 });

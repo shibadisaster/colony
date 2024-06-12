@@ -52,8 +52,7 @@ class Value {
         $("#overlays").append(
             "<div class='offcanvas offcanvas-start' tabindex='-1' id='" + this.name + "-breakdown-offcanvas' aria-labelledby='" + this.name + "-breakdown-offcanvasLabel'>" +
                 "<div class='offcanvas-header'>" +
-                    "<h5 class='offcanvas-title' id='" + this.name + "-breakdown-offcanvasLabel'>Breakdown</h5>" +
-                    "<button type='button' class='offcanvas-close' data-bs-dismiss='offcanvas' aria-label='Close'>&#10006;</button>" +
+                    "<h5 class='offcanvas-title' id='" + this.name + "-breakdown-offcanvasLabel'>" + this.name.toUpperCase().replaceAll("_", " ") + "</h5>" +
                 "</div>" +
                 "<div class='offcanvas-body'>" +
                     "<table class='table table-dark'>" +
@@ -70,6 +69,7 @@ class Value {
                 "</div>" +
             "</div>"
         );
+        //"<button type='button' class='offcanvas-close' data-bs-dismiss='offcanvas' aria-label='Close'>&#10006;</button>" +
     }
 
     update_breakdown() {

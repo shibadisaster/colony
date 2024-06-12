@@ -16,8 +16,10 @@
     --glow-radius: 4px;
 
     --default-padding: 4px;
+    --button-padding: 12px;
     --header-padding: 12px;
     --intertab-margin: 4px;
+    --button-margin: 4px;
     --navigation-bar-margin-top: 20px;
     --navigation-bar-margin-bottom: 10px;
     --section-header-margin-bottom: 20px;
@@ -35,13 +37,17 @@
 
 
 
+* {
+    transition: var(--transition-properties) var(--transition-time);
+}
+
 body {
     font-family: var(--font-family);
     font-size: var(--font-size);
     background-color: var(--background-color);
     color: var(--text-color);
     text-shadow: 0 0 var(--glow-radius) var(--glow-color);
-    transition: var(--transition-properties) var(--transition-time);
+    
 }
 
 .container {
@@ -149,12 +155,16 @@ body {
 .offcanvas-title {
     margin-left: auto;
     margin-right: auto;
+    font-size: var(--section-header-font-size);
+    font-weight: bold;
+    letter-spacing: var(--section-header-letter-spacing);
 }
 
 .offcanvas-close {
     color: var(--text-color);
     background-color: var(--background-color);
     border: none;
+    margin-left: calc(var(--font-size) * -4);
 }
 
 
@@ -200,6 +210,21 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+.button-default {
+    background-color: var(--input-background-color);
+    color: var(--text-color);
+
+    padding: var(--default-padding) var(--button-padding);
+    margin-bottom: var(--button-margin);
+
+    border: 1px var(--input-background-color) solid;
+    border-radius: var(--border-radius);
+}
+
+.button-default:hover {
+    border: 1px var(--text-color) solid;
 }
 
 
