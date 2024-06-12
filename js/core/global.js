@@ -26,6 +26,7 @@ function tick() {
         game.values[value].apply_value_modifiers();
         game.values[value].update_value_string();
         game.values[value].update_displays();
+        game.values[value].update_breakdown();
     }
 
     $(".locked-by-default").hide();

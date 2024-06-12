@@ -29,28 +29,6 @@ class Resource {
         this.update_value_string();
         $(".display-" + this.name + "-value_string").html(this.value_string);
         $(".display-" + this.name + "-production_rate").html(format_value_with_decimal(this.production_rate.value) + " " + this.name + "/s");
-        this.update_production_display();
-    }
-
-    update_production_display() {
-        var table_html = "";
-        var running_total = new Decimal(0);
-        for (var mod in this.production_rate.value_modifiers) {
-            if (this.production_rate.value_modifiers[mod].is_effectual()) {
-                this.production_rate.value_modifiers[mod].is_negative() ? table_html += "<tr class='color-negative-modifier'>" : table_html += "<tr>";
-
-                table_html += "<td>" + this.production_rate.value_modifiers[mod].name + "</td>";
-
-                table_html += "<td>" + this.production_rate.value_modifiers[mod].value_string + "</td>";
-
-                running_total = this.production_rate.value_modifiers[mod].apply_modifier(running_total);
-                table_html += "<td>" + format_value_with_decimal(running_total) + "/s </td>";
-
-                table_html += "</tr>";
-            }
-            
-        }
-        $(".production-breakdown-" + this.name).html(table_html);
     }
 
     apply_production() {

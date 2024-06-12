@@ -80,13 +80,13 @@
                         <div class="p-2 flex-even-width">
                             <div class="section-header"> ANTS </div>
 
-                            You currently have <span class="color-ants display display-ants-value_string"></span> <br>
-                            You are currently producing <span class="color-ants display display-hoverable display-ants-production_rate" data-bs-toggle="offcanvas" data-bs-target="#ants-production-offcanvas" aria-controls="ants-production-offcanvas"></span> <br>
+                            You currently have <span class="color-ants display display-hoverable display-ants-value_string" data-bs-toggle="offcanvas" data-bs-target="#ants_amount-breakdown-offcanvas" aria-controls="ants_amount-breakdown-offcanvas"></span> <br>
+                            You are currently producing <span class="color-ants display display-hoverable display-ants-production_rate" data-bs-toggle="offcanvas" data-bs-target="#ants_production_rate-breakdown-offcanvas" aria-controls="ants_production_rate-breakdown-offcanvas"></span> <br>
 
                             <br>
             
 
-                            <span class="locked-by-default unlocked-by-50_ants"> Your Colony's ant carrying capacity is <span class="color-ants display display-ant_carrying_capacity-value_string"></span>. <br>
+                            <span class="locked-by-default unlocked-by-50_ants"> Your Colony's ant carrying capacity is <span class="color-ants display display-hoverable display-ant_carrying_capacity-value_string" data-bs-toggle="offcanvas" data-bs-target="#ant_carrying_capacity-breakdown-offcanvas" aria-controls="ant_carrying_capacity-breakdown-offcanvas"></span>. <br>
                                 Each ant over this carrying capacity slows ant generation rate by <span class="color-ants display">5%</span> (compounding).</span>
 
                             <br><br><br>
@@ -194,7 +194,7 @@
                 <div class="tab-pane fade" id="info" role="tabpanel" aria-labelledby="info-tab">
                     <div class="d-flex flex-row justify-content-evenly">
 
-                        <div class="p-2 flex-even-width">
+                        <div class="p-2 flex-even-width about">
                             <div class="section-header"> ABOUT </div>
                         </div>
 
@@ -215,7 +215,7 @@
 
         <div class="overlays" id="overlays">
 
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="ants-production-offcanvas" aria-labelledby="ants-production-offcanvasLabel">
+            <!-- <div class="offcanvas offcanvas-start" tabindex="-1" id="ants-production-offcanvas" aria-labelledby="ants-production-offcanvasLabel">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="ants-production-offcanvasLabel">Ants Production</h5>
                     <button type="button" class="offcanvas-close" data-bs-dismiss="offcanvas" aria-label="Close">&#10006;</button>
@@ -233,7 +233,7 @@
                         </tbody>
                     </table>
                 </div>
-              </div>
+            </div> -->
 
         </div>
 
