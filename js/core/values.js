@@ -1,13 +1,13 @@
 class Value {
-    constructor(name, value) {
+    constructor(name, initial_value) {
         this.name = name;
-        this.value = value;
+        this.value = initial_value;
 
         this.value_string = "UNSETVALUE " + this.name;
 
         this.value_modifiers = [];
         var base_modifier = new ValueModifier("Base", "BASE", this);
-        base_modifier.value = value;
+        base_modifier.value = initial_value;
 
         game.values[this.name] = this;
     }
@@ -31,5 +31,9 @@ class Value {
         this.update_value_string();
         $(".display-" + this.name + "-value_string").html(this.value_string);
         //console.log((".display-" + this.name + "-value_string"));
+    }
+
+    get_base_modifier() {
+        return this.value_modifiers[0];
     }
 }

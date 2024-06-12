@@ -1,10 +1,11 @@
 class Resource {
-    constructor(singular_name, plural_name) {
+    constructor(singular_name, plural_name, initial_value) {
         this.singular_name = singular_name;
         this.plural_name = plural_name;
         this.name = plural_name;
 
-        this.amount = new Decimal(0);
+        //this.amount = new Decimal(0);
+        this.amount = new Value(this.name + "_amount", new Decimal(initial_value));
 
         this.value_string = "UNSETVALUE " + this.name;
         this.update_value_string();
@@ -16,11 +17,11 @@ class Resource {
     }
 
     update_value_string() {
-        if (this.amount.floor().eq(1)) {
-            this.value_string = format_value(this.amount) + " " + this.singular_name;
+        if (this.amount.value.floor().eq(1)) {
+            this.value_string = format_value(this.amount.value) + " " + this.singular_name;
         }
         else {
-            this.value_string = format_value(this.amount) + " " + this.plural_name;
+            this.value_string = format_value(this.amount.value) + " " + this.plural_name;
         }
     }
 
@@ -54,7 +55,8 @@ class Resource {
 
     apply_production() {
         //this.apply_value_modifiers();
-        this.amount = this.amount.add(this.production_rate.value.div(game.tickrate));
+        this.amount.get_base_modifier().value = 
+            this.amount.get_base_modifier().value.add(this.production_rate.value.div(game.tickrate));
     }
 
     // apply_value_modifiers() {
