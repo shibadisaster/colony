@@ -5,7 +5,7 @@ function format_value(decimal) {
 
     var exponent_suffix = decimal.e;
     var mantissa = decimal.div(new Decimal(10).pow(exponent_suffix));
-    mantissa = mantissa.toFixed(3, Decimal.ROUND_DOWN);
+    mantissa = mantissa.toFixed(2, Decimal.ROUND_DOWN);
     return mantissa + " &times; 10<sup>" + exponent_suffix + "</sup>";
 }
 
@@ -21,9 +21,9 @@ function format_value_with_decimal(decimal) {
     if (decimal.lt('0.001')) {
         var exponent_suffix = decimal.e;
         var mantissa = decimal.div(new Decimal(10).pow(exponent_suffix));
-        mantissa = mantissa.toFixed(3, Decimal.ROUND_DOWN);
+        mantissa = mantissa.toFixed(2, Decimal.ROUND_DOWN);
         return mantissa + " &times; 10<sup>" + exponent_suffix + "</sup>";
     }
 
-    return decimal.toFixed(3, Decimal.ROUND_DOWN);
+    return decimal.toFixed(2, Decimal.ROUND_DOWN);
 }

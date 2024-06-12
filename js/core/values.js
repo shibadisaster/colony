@@ -3,7 +3,8 @@ class Value {
         this.name = name;
         this.value = initial_value;
 
-        this.value_string = "UNSETVALUE " + this.name;
+        this.value_string = "UNSETVALUE";
+        this.value_string_with_decimal = "UNSETVALUE";
 
         this.value_modifiers = [];
         var base_modifier = new ValueModifier("Base", "BASE", this);
@@ -27,12 +28,20 @@ class Value {
 
     update_value_string() {
         this.value_string = format_value(this.value);
+        this.value_string_with_decimal = format_value_with_decimal(this.value);
     }
 
     update_displays() {
         this.update_value_string();
-        $(".display-" + this.name + "-value_string").html(this.value_string);
-        //console.log((".display-" + this.name + "-value_string"));
+        
+        var suffix = $(".display-" + this.name).data("suffix");
+        if (suffix == undefined) { suffix = ""; }
+
+        $(".display-" + this.name).attr("aria-controls", this.name + "-breakdown-offcanvas");
+        $(".display-" + this.name).addClass("display display-hoverable");
+
+        if ($(".display-" + this.name).hasClass("decimal-representation")) { $(".display-" + this.name).html(this.value_string_with_decimal + suffix); }
+        else { $(".display-" + this.name).html(this.value_string + suffix); }
     }
 
     get_base_modifier() {
@@ -40,7 +49,6 @@ class Value {
     }
 
     create_breakdown() {
-        console.log("its yo boy " + this.name);
         $("#overlays").append(
             "<div class='offcanvas offcanvas-start' tabindex='-1' id='" + this.name + "-breakdown-offcanvas' aria-labelledby='" + this.name + "-breakdown-offcanvasLabel'>" +
                 "<div class='offcanvas-header'>" +

@@ -1,6 +1,6 @@
 $('document').ready(function() {
     // resource declarations
-    ants = new Resource("ant", "ants", new Decimal(2));
+    ants = new Resource("ants", new Decimal(2));
 
 
 

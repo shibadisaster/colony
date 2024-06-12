@@ -13,7 +13,6 @@ function tick() {
     game.total_time += 1 / game.tickrate;
 
     for (resource in game.resources) {
-        game.resources[resource].update_displays();
         game.resources[resource].apply_production();
     }
 
