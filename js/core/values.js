@@ -92,4 +92,28 @@ class Value {
         }
         $(".breakdown-" + this.name).html(table_html);
     }
+
+
+
+    add(effect_name, value) {
+        var in_modifiers_list = false;
+        var existing_modifier;
+        for (var mod in this.value_modifiers) {
+            //console.log(this.value_modifiers[mod].name);
+            if (this.value_modifiers[mod].name == effect_name) {
+                in_modifiers_list = true;
+                existing_modifier = this.value_modifiers[mod];
+            }
+        }
+
+        if (in_modifiers_list) {
+            existing_modifier.value = existing_modifier.value.add(value);
+        }
+        else {
+            var effect = new ValueModifier(effect_name, "ADD", this);
+            effect.value = value;
+        }
+
+        return in_modifiers_list;
+    }
 }

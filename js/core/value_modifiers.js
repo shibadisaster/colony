@@ -21,7 +21,7 @@ class ValueModifier {
                 this.value_string += format_value_with_decimal(this.value);
                 break;
             case "ADD":
-                this.value_string += "&plus;";
+                if (this.value.gt(0)) { this.value_string += "&plus;"; }
                 this.value_string += format_value_with_decimal(this.value);
                 break;
             case "MULT":
